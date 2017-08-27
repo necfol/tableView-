@@ -31,11 +31,20 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F3R-ud-Rvk">
+                        <rect key="frame" x="102" y="13.5" width="14" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="14" id="dQ1-pN-g4E"/>
+                            <constraint firstAttribute="height" constant="14" id="iZh-pJ-MP9"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="F3R-ud-Rvk" firstAttribute="leading" secondItem="o2o-jo-gNV" secondAttribute="trailing" constant="10" id="54c-da-wnb"/>
                     <constraint firstItem="68C-VV-j4X" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="K28-hH-87P"/>
                     <constraint firstItem="o2o-jo-gNV" firstAttribute="leading" secondItem="68C-VV-j4X" secondAttribute="trailing" constant="10" id="NMf-Xf-IMX"/>
                     <constraint firstItem="68C-VV-j4X" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="P0C-4i-lte"/>
+                    <constraint firstItem="F3R-ud-Rvk" firstAttribute="centerY" secondItem="o2o-jo-gNV" secondAttribute="centerY" id="QIu-Gy-LXz"/>
                     <constraint firstItem="o2o-jo-gNV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="mUR-cB-QH5"/>
                 </constraints>
             </tableViewCellContentView>

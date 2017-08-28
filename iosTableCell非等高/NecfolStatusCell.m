@@ -21,4 +21,13 @@
     // Configure the view for the selected state
 }
 
++(instancetype)cellWithTableView:(UITableView *)tableview {
+    static NSString *ID = @"NecfolStatus";
+    NecfolStatusCell *cell = [tableview dequeueReusableCellWithIdentifier:ID];
+    if(cell == nil) {
+        cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([NecfolStatusCell class]) owner:nil options:nil] lastObject];
+    }
+    return cell;
+}
+
 @end

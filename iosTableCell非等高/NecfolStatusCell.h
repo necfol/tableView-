@@ -10,4 +10,6 @@
 
 @interface NecfolStatusCell : UITableViewCell
 
++(instancetype) cellWithTableView:(UITableView *)tableview;
+
 @end

@@ -42,9 +42,21 @@
 -(void)setStatus:(NecfolStatus *)status {
     
     _status = status;
+    if ( status.isVip ) {
+        self.nameLabel.textColor = [UIColor orangeColor];
+        self.vipView.hidden = NO;
+    } else {
+        self.nameLabel.textColor = [UIColor blackColor];
+        self.vipView.hidden = YES;
+    }
     self.nameLabel.text = status.name;
     self.iconView.image = [UIImage imageNamed:status.icon];
-    self.pictureView.image = [UIImage imageNamed:status.picture];
+    if (status.picture) {
+        self.pictureView.hidden = NO;
+        self.pictureView.image = [UIImage imageNamed:status.picture];
+    } else {
+        self.pictureView.hidden = YES;
+    }
     self.contentLabel.text = status.text;
     
 }

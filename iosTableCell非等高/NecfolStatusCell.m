@@ -61,4 +61,12 @@
     
 }
 
+-(CGFloat)height {
+    if (self.pictureView.hidden) {
+        return CGRectGetMaxY(self.contentLabel.frame) + 10;
+    } else {
+        return CGRectGetMaxY(self.pictureView.frame) + 10;
+    }
+}
+
 @end

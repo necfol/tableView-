@@ -13,4 +13,6 @@
 
 +(instancetype) cellWithTableView:(UITableView *)tableview;
 @property (nonatomic, strong) NecfolStatus *status;
+
+-(CGFloat)height;
 @end

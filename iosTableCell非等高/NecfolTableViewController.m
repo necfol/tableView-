@@ -14,6 +14,7 @@
 
 @property (strong, nonatomic) NSArray *statuses;
 
+@property (nonatomic, strong) NSMutableDictionary *heights;
 @end
 
 @implementation NecfolTableViewController
@@ -33,14 +34,14 @@
     return _statuses;
 }
 
+-(NSDictionary *)heights {
+    if (_heights == nil) {
+        _heights = [[NSMutableDictionary alloc] init];
+    }
+    return _heights;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 
@@ -56,6 +57,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NecfolStatusCell *cell = [NecfolStatusCell cellWithTableView:tableView];
     cell.status = _statuses[indexPath.row];
+    [cell layoutIfNeeded];
+    self.heights[@(indexPath.row)] = @(cell.height);
     return cell;
 }
 #pragma mark - delegate方法
@@ -64,6 +67,10 @@
  返回高度
  */
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 250;
+    return [self.heights[@(indexPath.row)] doubleValue];
+}
+
+-(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 200;
 }
 @end

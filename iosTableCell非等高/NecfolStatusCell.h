@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class NecfolStatus;
 @interface NecfolStatusCell : UITableViewCell
 
 +(instancetype) cellWithTableView:(UITableView *)tableview;
-
+@property (nonatomic, strong) NecfolStatus *status;
 @end

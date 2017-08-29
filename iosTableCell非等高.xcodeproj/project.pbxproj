@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		F1CF6A4C1F530D6D00EF4F9A /* NecfolStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CF6A4A1F530D6D00EF4F9A /* NecfolStatusCell.m */; };
 		F1CF6A4D1F530D6D00EF4F9A /* NecfolStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1CF6A4B1F530D6D00EF4F9A /* NecfolStatusCell.xib */; };
+		F1CF6A691F5458F200EF4F9A /* statuses.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1CF6A681F5458F200EF4F9A /* statuses.plist */; };
+		F1CF6A6C1F54591E00EF4F9A /* NecfolStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CF6A6B1F54591E00EF4F9A /* NecfolStatus.m */; };
+		F1CF6A6F1F5461D800EF4F9A /* NecfolTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CF6A6E1F5461D800EF4F9A /* NecfolTableViewController.m */; };
 		F1EDA57F1F5008CC0090C704 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EDA57E1F5008CC0090C704 /* main.m */; };
 		F1EDA5821F5008CC0090C704 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EDA5811F5008CC0090C704 /* AppDelegate.m */; };
 		F1EDA5851F5008CC0090C704 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EDA5841F5008CC0090C704 /* ViewController.m */; };
@@ -21,6 +24,11 @@
 		F1CF6A491F530D6D00EF4F9A /* NecfolStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NecfolStatusCell.h; sourceTree = "<group>"; };
 		F1CF6A4A1F530D6D00EF4F9A /* NecfolStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NecfolStatusCell.m; sourceTree = "<group>"; };
 		F1CF6A4B1F530D6D00EF4F9A /* NecfolStatusCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NecfolStatusCell.xib; sourceTree = "<group>"; };
+		F1CF6A681F5458F200EF4F9A /* statuses.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = statuses.plist; sourceTree = "<group>"; };
+		F1CF6A6A1F54591E00EF4F9A /* NecfolStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NecfolStatus.h; sourceTree = "<group>"; };
+		F1CF6A6B1F54591E00EF4F9A /* NecfolStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NecfolStatus.m; sourceTree = "<group>"; };
+		F1CF6A6D1F5461D800EF4F9A /* NecfolTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NecfolTableViewController.h; sourceTree = "<group>"; };
+		F1CF6A6E1F5461D800EF4F9A /* NecfolTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NecfolTableViewController.m; sourceTree = "<group>"; };
 		F1EDA57A1F5008CC0090C704 /* iosTableCell非等高.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iosTableCell非等高.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1EDA57E1F5008CC0090C704 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F1EDA5801F5008CC0090C704 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -65,6 +73,10 @@
 			children = (
 				F1EDA5801F5008CC0090C704 /* AppDelegate.h */,
 				F1EDA5811F5008CC0090C704 /* AppDelegate.m */,
+				F1CF6A6D1F5461D800EF4F9A /* NecfolTableViewController.h */,
+				F1CF6A6E1F5461D800EF4F9A /* NecfolTableViewController.m */,
+				F1CF6A6A1F54591E00EF4F9A /* NecfolStatus.h */,
+				F1CF6A6B1F54591E00EF4F9A /* NecfolStatus.m */,
 				F1CF6A491F530D6D00EF4F9A /* NecfolStatusCell.h */,
 				F1CF6A4A1F530D6D00EF4F9A /* NecfolStatusCell.m */,
 				F1CF6A4B1F530D6D00EF4F9A /* NecfolStatusCell.xib */,
@@ -73,6 +85,7 @@
 				F1EDA5861F5008CC0090C704 /* Main.storyboard */,
 				F1EDA5891F5008CC0090C704 /* Assets.xcassets */,
 				F1EDA58B1F5008CC0090C704 /* LaunchScreen.storyboard */,
+				F1CF6A681F5458F200EF4F9A /* statuses.plist */,
 				F1EDA58E1F5008CC0090C704 /* Info.plist */,
 				F1EDA57D1F5008CC0090C704 /* Supporting Files */,
 			);
@@ -148,6 +161,7 @@
 			files = (
 				F1CF6A4D1F530D6D00EF4F9A /* NecfolStatusCell.xib in Resources */,
 				F1EDA58D1F5008CC0090C704 /* LaunchScreen.storyboard in Resources */,
+				F1CF6A691F5458F200EF4F9A /* statuses.plist in Resources */,
 				F1EDA58A1F5008CC0090C704 /* Assets.xcassets in Resources */,
 				F1EDA5881F5008CC0090C704 /* Main.storyboard in Resources */,
 			);
@@ -160,7 +174,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1CF6A6C1F54591E00EF4F9A /* NecfolStatus.m in Sources */,
 				F1CF6A4C1F530D6D00EF4F9A /* NecfolStatusCell.m in Sources */,
+				F1CF6A6F1F5461D800EF4F9A /* NecfolTableViewController.m in Sources */,
 				F1EDA5851F5008CC0090C704 /* ViewController.m in Sources */,
 				F1EDA5821F5008CC0090C704 /* AppDelegate.m in Sources */,
 				F1EDA57F1F5008CC0090C704 /* main.m in Sources */,

@@ -7,7 +7,16 @@
 //
 
 #import "NecfolStatusCell.h"
+#import "NecfolStatus.h"
 
+@interface NecfolStatusCell()
+@property (weak, nonatomic) IBOutlet UIImageView *iconView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *vipView;
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *pictureView;
+
+@end
 @implementation NecfolStatusCell
 
 - (void)awakeFromNib {
@@ -28,6 +37,16 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([NecfolStatusCell class]) owner:nil options:nil] lastObject];
     }
     return cell;
+}
+
+-(void)setStatus:(NecfolStatus *)status {
+    
+    _status = status;
+    self.nameLabel.text = status.name;
+    self.iconView.image = [UIImage imageNamed:status.icon];
+    self.pictureView.image = [UIImage imageNamed:status.picture];
+    self.contentLabel.text = status.text;
+    
 }
 
 @end

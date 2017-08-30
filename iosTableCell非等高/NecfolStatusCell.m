@@ -40,7 +40,6 @@
 }
 
 -(void)setStatus:(NecfolStatus *)status {
-    
     _status = status;
     if ( status.isVip ) {
         self.nameLabel.textColor = [UIColor orangeColor];
@@ -58,6 +57,12 @@
         self.pictureView.hidden = YES;
     }
     self.contentLabel.text = status.text;
+    [self layoutIfNeeded];
+    if (self.pictureView.hidden) {
+        status.cellHeight = CGRectGetMaxY(self.contentLabel.frame) + 10;
+    } else {
+        status.cellHeight = CGRectGetMaxY(self.pictureView.frame) + 10;
+    }
     
 }
 

@@ -23,12 +23,10 @@
     [super awakeFromNib];
     self.contentLabel.preferredMaxLayoutWidth = [UIScreen mainScreen].bounds.size.width - 20;
 }
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
+//
+//- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+//    [super setSelected:selected animated:animated];
+//}
 
 +(instancetype)cellWithTableView:(UITableView *)tableview {
     static NSString *ID = @"NecfolStatus";
